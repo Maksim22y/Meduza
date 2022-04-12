@@ -1,0 +1,6 @@
+Змінити щось в файлі 
+get status
+get add .
+get status
+get commit    (mwcjeoc)
+get push
