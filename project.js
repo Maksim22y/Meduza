@@ -5,3 +5,4 @@ document.addEventListener('click',(e)=>{
 
 let kjff
 let icdnfjdsflvf
+let togtrmrgb 
