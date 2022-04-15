@@ -37,7 +37,6 @@ i+=screen.innerHTML
   }
 // if (screen.innerHTML=='+')
 if(screen.innerHTML=='='){alert (result),alert(u),alert(i)}
-if
 }
 
 //    if(buttons.includes(screen.innerHTML) ) { result+=screnerHTML en.in
