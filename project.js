@@ -18,6 +18,8 @@ let sign=''
 let a=''
 let b=''
 function vvod(){
+  heightBtn=document.querySelector('.calc')
+  heightScreen=document.querySelector('.screen')
 btn = document.querySelectorAll('.butons div');
 screen = document.querySelector('body > div.calc > div.screen > p');
   
@@ -43,40 +45,63 @@ screen = document.querySelector('body > div.calc > div.screen > p');
     })
     
   }
+  // document.addEventListener("click", function(e) {
+  //   if (e.target.className=="butons") {
+      
+  //    //ваши действия
+  //   }
+  // }); //якщо попадаєш на кнопки     
+
+  
   if(buttons.includes(screen.innerHTML) && sign=='' ){
-  a+=screen.innerHTML}
+  a+=screen.innerHTML }
   else if (siggn.includes(screen.innerHTML) ){
-    sign=screen.innerHTML
+    sign+=screen.innerHTML
   }
   else if (buttons.includes(screen.innerHTML) && sign!==''){
 b+=screen.innerHTML
   }
+  
+  // else if (sign.length>1){a=result
+  // }
+  
   result+=screen.innerHTML
+  if (result.includes('C')){result=''
+  a='',
+  b='',
+  sign=''}
+
+  screen.innerHTML=result
  
+  if (siggn.includes(result[0])){result=''
+  sign=''}
+
   // if (screen.innerHTML=='+')
-if(screen.innerHTML=='='){
+if(screen.innerHTML.includes('=')){
 switch(sign){
   case '-':
-  screen.innerHTML=result+(+a-(+b))
+  screen.innerHTML=result+(+a-(+b)).toFixed(1)
   break 
   case '+':
-    screen.innerHTML=result+(+a+(+b))
+    screen.innerHTML=result+(+a+(+b)).toFixed(1)
     break
     case '/':
-      screen.innerHTML=result+(a/b).toFixed(1)
+      screen.innerHTML=result+(a/b).toFixed(2)
       break 
       case 'x':
-        screen.innerHTML=result+(a*b).toFixed(1)
+        screen.innerHTML=result+(a*b).toFixed(2)
         break
-
+        
 }
+if (screen.innerHTML.length>20){heightScreen.style.height='250px'
+        heightBtn.style.height='610px'}
 result=''
 a='',
 b='',
 sign=''
-}
-}
+} 
 
+}
 //    if(buttons.includes(screen.innerHTML) ) { result+=screnerHTML en.in
 //     } 
 //     if( screen.innerHTML=='+') {b+=screen.innerHTML}
@@ -93,9 +118,3 @@ sign=''
 
 
 
-// document.addEventListener("click", function(e) {
-//   if (e.target.className=="butons") {
-//     alert('c')
-//    //ваши действия
-//   }
-// }); якщо попадаєш на кнопки     

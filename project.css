@@ -4,7 +4,7 @@
     border: 5px solid rgb(31, 30, 30);
     border-radius: 14px;
     background-color: rgb(36, 35, 35);
-    margin: 20px;
+    margin: 70px;
     padding: 10px;
 }
 .butons{
@@ -29,18 +29,20 @@
     margin: 8px;
     background-color: rgb(36, 35, 35);
     color: aliceblue;
-    user-select: none;/* не виділяється при кліках */
+    user-select: none;
     
 }
 .screen{
     user-select: none;
     height: 140px;
+    width: 285px;
     border: 3px solid rgb(61, 61, 60) ;
     border-radius: 20px;
     background-color: rgb(61, 61, 60);
-    font-size: 50px;
-    text-align: end;
-    line-height: 90px;
+    font-size: 45px;
+    word-wrap:break-word;
+    text-align:end;
+    line-height:45px;
     color: aliceblue;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
