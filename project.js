@@ -51,39 +51,68 @@ screen = document.querySelector('body > div.calc > div.screen > p');
   //    //ваши действия
   //   }
   // }); //якщо попадаєш на кнопки     
-
-  
+ 
   if(buttons.includes(screen.innerHTML) && sign=='' ){
   a+=screen.innerHTML }
-  else if (siggn.includes(screen.innerHTML) ){
+  
+  else if (siggn.includes(screen.innerHTML)&& a!==''){
     sign+=screen.innerHTML
   }
+  // else if (sign[0].includes('-')){
+  //   // sign=sign[1]
+  // alert (sign[1])}
   else if (buttons.includes(screen.innerHTML) && sign!==''){
 b+=screen.innerHTML
   }
-  
+
+
+  // else if (sign.length==2){
+  // alert(sign)
+    
+  // }
   // else if (sign.length>1){a=result
   // }
-  
-  result+=screen.innerHTML
+ 
+
+  result+=screen.innerHTML 
   if (result.includes('C')){result=''
   a='',
   b='',
   sign=''}
 
+  if(a=="" && result.includes('x')){
+      result=''
+      
+    }
+        if(a=="" && result.includes('/')){           //Якогось хуя не працювало в одному через або(||) 
+      result=''
+    }
+    
   screen.innerHTML=result
  
-  if (siggn.includes(result[0])){result=''
-  sign=''}
 
+ 
+  // if (siggn.includes(result[0])){result=''
+  // sign=''}
+  // if (screen.innerHTML[0]=='-'){ 
+  //   a=(-(a))
+   
+  // }
+  //  alert(a)
+  // alert(sign)
+  // alert(b)
+  
   // if (screen.innerHTML=='+')
 if(screen.innerHTML.includes('=')){
+ if(screen.innerHTML[0]=='-'){
+  a=(-a)
+ }
 switch(sign){
   case '-':
   screen.innerHTML=result+(+a-(+b)).toFixed(1)
   break 
   case '+':
-    screen.innerHTML=result+(+a+(+b)).toFixed(1)
+    screen.innerHTML=result+(+a+(+b))
     break
     case '/':
       screen.innerHTML=result+(a/b).toFixed(2)
@@ -102,6 +131,7 @@ sign=''
 } 
 
 }
+
 //    if(buttons.includes(screen.innerHTML) ) { result+=screnerHTML en.in
 //     } 
 //     if( screen.innerHTML=='+') {b+=screen.innerHTML}
