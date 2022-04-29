@@ -72,7 +72,6 @@ b+=screen.innerHTML
   // }
   // else if (sign.length>1){a=result
   // }
- 
 
   result+=screen.innerHTML 
   if (result.includes('C')){result=''
@@ -92,7 +91,7 @@ b+=screen.innerHTML
     }
     
   screen.innerHTML=result
- 
+    
 
   // alert (a,sign,b)
 
@@ -126,10 +125,12 @@ b+=screen.innerHTML
     }
     sign=sign[1]
     b=''
+    
     // alert("a="+a)
     // alert('sign='+sign)
     // if(buttons.includes(screen.innerHTML) && sign==''){
     //   a+=screen.innerHTML }
+     
       
     //   else if (siggn.includes(screen.innerHTML)&& a!==''){
     //     sign+=screen.innerHTML
@@ -140,13 +141,24 @@ b+=screen.innerHTML
     //   else if (buttons.includes(screen.innerHTML) && sign!==''){
     // b+=screen.innerHTML
     //   }
+   
+
+
       if(screen.innerHTML.includes('=')){
+        if(!Number.isInteger(a)){   
         screen.innerHTML=result+(+a).toFixed(2)
-        a=``
+      
+      }
+        else {
+          screen.innerHTML=result+(+a)
+        }
+        // a=``
         b=``
         sign=``
-        result=``
-      }
+        result=a
+      
+    }
+
    }
   
   //  alert('b='+b)
@@ -185,7 +197,6 @@ if (screen.innerHTML.length>20){heightScreen.style.height='250px'
 // } 
 // alert(a,sign,b)
 }
-
 //    if(buttons.includes(screen.innerHTML) ) { result+=screnerHTML en.in
 //     } 
 //     if( screen.innerHTML=='+') {b+=screen.innerHTML}
