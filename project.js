@@ -52,7 +52,7 @@ screen = document.querySelector('body > div.calc > div.screen > p');
   //   }
   // }); //якщо попадаєш на кнопки     
  
-  if(buttons.includes(screen.innerHTML) && sign=='' ){
+  if(buttons.includes(screen.innerHTML) && sign==''){
   a+=screen.innerHTML }
   
   else if (siggn.includes(screen.innerHTML)&& a!==''){
@@ -87,49 +87,103 @@ b+=screen.innerHTML
         if(a=="" && result.includes('/')){           //Якогось хуя не працювало в одному через або(||) 
       result=''
     }
+    if(a=="" && result.includes('+')){           //Якогось хуя не працювало в одному через або(||) 
+      result=''
+    }
     
   screen.innerHTML=result
  
 
- 
+  // alert (a,sign,b)
+
   // if (siggn.includes(result[0])){result=''
   // sign=''}
-  // if (screen.innerHTML[0]=='-'){ 
-  //   a=(-(a))
+  
+ 
+  // alert(a)
+  // alert(sign)
+  // alert(b)
+
    
+   if(siggn.includes(sign[1])|| screen.innerHTML.includes('=')){
+    if (screen.innerHTML[0]=='-'){ 
+      a=(-(a))
+    }
+    switch(sign[0]){
+      case '-':
+      a=(+a-(+b)) 
+      break 
+      case '+':
+         a=(+a+(+b))
+        break
+        case '/':
+          a=(a/b)
+          break 
+          case 'x':
+          a=(a*b)
+            break
+            
+    }
+    sign=sign[1]
+    b=''
+    // alert("a="+a)
+    // alert('sign='+sign)
+    // if(buttons.includes(screen.innerHTML) && sign==''){
+    //   a+=screen.innerHTML }
+      
+    //   else if (siggn.includes(screen.innerHTML)&& a!==''){
+    //     sign+=screen.innerHTML
+    //   }
+    //   // else if (sign[0].includes('-')){
+    //   //   // sign=sign[1]
+    //   // alert (sign[1])}
+    //   else if (buttons.includes(screen.innerHTML) && sign!==''){
+    // b+=screen.innerHTML
+    //   }
+      if(screen.innerHTML.includes('=')){
+        screen.innerHTML=result+(+a).toFixed(2)
+        a=``
+        b=``
+        sign=``
+        result=``
+      }
+   }
+  
+  //  alert('b='+b)
+  
   // }
   //  alert(a)
   // alert(sign)
+
   // alert(b)
-  
   // if (screen.innerHTML=='+')
-if(screen.innerHTML.includes('=')){
- if(screen.innerHTML[0]=='-'){
-  a=(-a)
- }
-switch(sign){
-  case '-':
-  screen.innerHTML=result+(+a-(+b)).toFixed(1)
-  break 
-  case '+':
-    screen.innerHTML=result+(+a+(+b))
-    break
-    case '/':
-      screen.innerHTML=result+(a/b).toFixed(2)
-      break 
-      case 'x':
-        screen.innerHTML=result+(a*b).toFixed(2)
-        break
+// if(screen.innerHTML.includes('=')){
+//  if(screen.innerHTML[0]=='-'){
+//   a=(-a)
+//  }
+// switch(sign){
+//   case '-':
+//   screen.innerHTML=result+(+a-(+b)).toFixed(1)
+//   break 
+//   case '+':
+//     screen.innerHTML=result+(+a+(+b))
+//     break
+//     case '/':
+//       screen.innerHTML=result+(a/b).toFixed(2)
+//       break 
+//       case 'x':
+//         screen.innerHTML=result+(a*b).toFixed(2)
+//         break
         
-}
+// }
 if (screen.innerHTML.length>20){heightScreen.style.height='250px'
         heightBtn.style.height='610px'}
-result=''
-a='',
-b='',
-sign=''
-} 
-
+// result=''
+// a='',
+// b='',
+// sign=''
+// } 
+// alert(a,sign,b)
 }
 
 //    if(buttons.includes(screen.innerHTML) ) { result+=screnerHTML en.in
@@ -145,6 +199,5 @@ sign=''
   
  
 // if (siggn.includes(e.innerHTML))alert ('tru')
-
 
 
