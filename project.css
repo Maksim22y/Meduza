@@ -14,7 +14,7 @@
     "four five six mnoj"
     "one two tree minus"
     "clean zero point plus"
-    "amount amount amount amount";/*кнопки будкть попорядку..так як написано*/
+    "left amount amount amount";/*кнопки будкть попорядку..так як написано*/
 }
 .btn{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -52,7 +52,7 @@
 .amount{
     background-color: rgb(236, 136, 5);
     grid-area: amount;
-    width: 95%;
+    width: 93%;
 }
 .btn:hover{
     cursor:pointer;/*змінює курсор на руку*/
@@ -64,3 +64,6 @@ background-color: gray;
 .clean{
     background-color: rgb(26, 26, 26);
 }
+.left{
+    background-color: rgb(31, 19, 19);
+} 

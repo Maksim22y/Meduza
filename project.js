@@ -79,6 +79,23 @@ b+=screen.innerHTML
   b='',
   sign=''}
 
+  if(result.includes('&lt')){
+     result=result.slice(0,-5)
+  if(b!==''){
+b=b.slice(0,-1)
+  }
+  else if (b=='' && sign!==''){
+    sign=sign.slice(0,-1)
+  }
+  else if (b==''&& sign=='') {
+    a=a.slice(0,-1)
+  }
+   } 
+//    alert (a)
+//    alert(b)
+// alert(sign)
+  
+ 
   if(a=="" && result.includes('x')){
       result=''
       
@@ -93,8 +110,9 @@ b+=screen.innerHTML
   screen.innerHTML=result
     
 
-  // alert (a,sign,b)
-
+//    alert (a)
+//    alert(b)
+// alert(sign)
   // if (siggn.includes(result[0])){result=''
   // sign=''}
   
@@ -102,14 +120,15 @@ b+=screen.innerHTML
   // alert(a)
   // alert(sign)
   // alert(b)
-
+ 
+ 
    
    if(siggn.includes(sign[1])|| screen.innerHTML.includes('=')){
-    if (screen.innerHTML[0]=='-'){ 
+    if (screen.innerHTML[0].includes('-')){ 
       a=(-(a))
     }
     switch(sign[0]){
-      case '-':
+      case '-':   
       a=(+a-(+b)) 
       break 
       case '+':
@@ -125,13 +144,11 @@ b+=screen.innerHTML
     }
     sign=sign[1]
     b=''
-    
     // alert("a="+a)
     // alert('sign='+sign)
     // if(buttons.includes(screen.innerHTML) && sign==''){
     //   a+=screen.innerHTML }
      
-      
     //   else if (siggn.includes(screen.innerHTML)&& a!==''){
     //     sign+=screen.innerHTML
     //   }
@@ -147,7 +164,7 @@ b+=screen.innerHTML
       if(screen.innerHTML.includes('=')){
         if(!Number.isInteger(a)){   
         screen.innerHTML=result+(+a).toFixed(2)
-      
+   
       }
         else {
           screen.innerHTML=result+(+a)
@@ -157,8 +174,9 @@ b+=screen.innerHTML
         sign=``
         result=a
       
+      
     }
-
+    
    }
   
   //  alert('b='+b)
@@ -186,7 +204,7 @@ b+=screen.innerHTML
 //       case 'x':
 //         screen.innerHTML=result+(a*b).toFixed(2)
 //         break
-        
+
 // }
 if (screen.innerHTML.length>20){heightScreen.style.height='250px'
         heightBtn.style.height='610px'}
@@ -196,6 +214,7 @@ if (screen.innerHTML.length>20){heightScreen.style.height='250px'
 // sign=''
 // } 
 // alert(a,sign,b)
+
 }
 //    if(buttons.includes(screen.innerHTML) ) { result+=screnerHTML en.in
 //     } 
