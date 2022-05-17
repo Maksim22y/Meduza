@@ -1,5 +1,5 @@
-.calc{
-    height: 500px; 
+.calc {
+    height: 500px;
     width: 290px;
     border: 5px solid rgb(31, 30, 30);
     border-radius: 14px;
@@ -7,21 +7,24 @@
     margin: 70px;
     padding: 10px;
 }
-.butons{
+
+.butons {
     display: grid;
-    grid-template-areas: 
-    "seven eight nine dilen"
-    "four five six mnoj"
-    "one two tree minus"
-    "clean zero point plus"
-    "left amount amount amount";/*кнопки будкть попорядку..так як написано*/
+    grid-template-areas:
+        "seven eight nine dilen"
+        "four five six mnoj"
+        "one two tree minus"
+        "clean zero point plus"
+        "left amount amount amount";
+    /*кнопки будкть попорядку..так як написано*/
 }
-.btn{
+
+.btn {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size:26px;
+    font-size: 26px;
     height: 55px;
     width: 55px;
-    border: 1px solid rgb(36, 35, 35) ;
+    border: 1px solid rgb(36, 35, 35);
     border-radius: 100px;
     justify-items: center;
     text-align: center;
@@ -30,40 +33,48 @@
     background-color: rgb(36, 35, 35);
     color: aliceblue;
     user-select: none;
-    
+
 }
-.screen{
+
+.screen {
     user-select: none;
     height: 140px;
     width: 285px;
-    border: 3px solid rgb(61, 61, 60) ;
+    border: 3px solid rgb(61, 61, 60);
     border-radius: 20px;
     background-color: rgb(61, 61, 60);
     font-size: 45px;
-    word-wrap:break-word;
-    text-align:end;
-    line-height:45px;
+    word-wrap: break-word;
+    text-align: end;
+    line-height: 45px;
     color: aliceblue;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.gray{
-    background-color:rgb(255, 123, 0) ;
+
+.gray {
+    background-color: rgb(255, 123, 0);
 }
-.amount{
+
+.amount {
     background-color: rgb(236, 136, 5);
     grid-area: amount;
     width: 93%;
 }
-.btn:hover{
-    cursor:pointer;/*змінює курсор на руку*/
-background-color: gray;
-} 
-.gray:hover{
+
+.btn:hover {
+    cursor: pointer;
+    /*змінює курсор на руку*/
+    background-color: gray;
+}
+
+.gray:hover {
     background-color: rgb(255, 187, 0);
 }
-.clean{
+
+.clean {
     background-color: rgb(26, 26, 26);
 }
-.left{
+
+.left {
     background-color: rgb(31, 19, 19);
-} 
+}
