@@ -173,8 +173,7 @@ if (!Number.isInteger(a)){
         sign = ``
         result = a
 
-let oooo=eval(result)
-alert(oooo)
+
       }
 
     }
